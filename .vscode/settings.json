@@ -48,7 +48,7 @@
     // }
   ]
 },
-"liveServer.settings.port": 5501,
+"liveServer.settings.port": 5502,
 "editor.formatOnType": true,
 "editor.defaultFormatter": "vscode.json-language-features",
 }
