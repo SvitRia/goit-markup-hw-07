@@ -929,7 +929,7 @@ padding: 0px;
  /*--footer--*/
 
 .footer { 
-    max-width: 1440px;
+    width: 1440px;
     margin: 0px auto;
     padding: 96px 0px;
     background: var(--backgraund-dark)
@@ -961,7 +961,6 @@ padding: 0px;
 
 @media only screen and (min-width: 1158px) {
   .footer-box {
-    flex-direction: row;
     flex-wrap: nowrap;
     align-items: baseline;
     gap: 0px;
@@ -1070,6 +1069,7 @@ padding: 0px;
 @media only screen and (min-width: 1158px) {
   .subscribe {
     margin-left: 80px;
+    padding-right: 0px; 
   }
 }
 
@@ -1090,7 +1090,8 @@ padding: 0px;
 
 .footer-input {
     display: block; 
-    position: relative;   
+    position: relative; 
+    
 }
 
 .email-holder {
