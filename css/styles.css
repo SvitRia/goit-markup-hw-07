@@ -205,23 +205,15 @@ section {
 .header {
     position: fixed;
     width: 100%;
+    height: 72px;
     top: 0;
-    padding-top: 40px;
-    padding-bottom: 22px;
+    padding-top: 16px;
+    padding-left: 16px;
     border-bottom: 1px solid var(--leinercoolor);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
  }
 
- .header-mobile {
-    display: flex;
-    max-width: 428px;
-   
- }
- .mobile-logo {
-    position: absolute;
-    top: 24px;
-    left: 16px;   
- }
+
  .menu {
     display: flex;
     padding: 0;
@@ -229,24 +221,51 @@ section {
     list-style: none;
   }
   
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .menu {
       display: none;
     }
   }
-  
-  .menu .link {
-    padding: 10px;
-    color: inherit;
-    text-decoration: none;
+
+  /*--mobile-header-menu--*/
+
+.header-mobile {
+    display: flex;
+    max-width: 428px;
+ }
+
+ @media only screen and (min-width: 768px) {
+    .header-mobile {
+      display: none;
+    }
   }
   
-  .menu .link:hover,
-  .menu .link:focus {
-    text-decoration: underline;
+.mobile-logo {
+    position: absolute;
+    top: 24px;
+    left: 16px;   
+ }
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 80px;
+    padding-left: 40px;
+    background-color: var(--white-color);
+    z-index: 999;
+  
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+  }
+  @media only screen and (min-width: 768px) {
+    .menu-container {
+      display: none;
+    }
   }
   
- .menu-toggle {
+.menu-toggle {
     position: absolute;
     top: 24px;
     right: 16px;
@@ -261,77 +280,110 @@ section {
     outline: none;
   }
   
-  @media (min-width: 768px) {
+ @media (min-width: 768px) {
     .menu-toggle {
       display: none;
     }
   }
   
-  .menu-toggle:hover,
-  .menu-toggle:focus {
+.menu-toggle:hover,
+.menu-toggle:focus {
     background-color: rgba(0, 0, 0, 0.1);
   }
   
-  .menu-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 32px;
-    background-color: #3f51b5;
-    z-index: 999;
-  
-    transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
-  }
-  
-  .menu-container.is-open {
+.menu-container.is-open {
     transform: translateX(0);
   }
   
-  .menu-container .menu-toggle {
+.menu-container .menu-toggle {
     position: absolute;
-    top: 16px;
-    right: 16px;
-    color: #fff;
-  }
-  
-  .mobile-menu {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
-  .mobile-menu .link {
-    display: block;
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
+    top: 24px;
+    right: 24px;
+    color: var(--backgraund-dark);
+    background-color: #fff;
+    border: 1px solid var(--leinercoolor);
+    border-radius: 50%;
   }
 
-@media only screen and (min-width: 768px) {
-  .header-mobile {
-    display: none;
+.mobile-nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+
+    position: absolute;
+    width: 151px;
+    height: 200px;
+    left: 40px;
+    top: 80px;
   }
+
+.active-mobile {
+    color: var(--btn-color-okean);
 }
+
+.mobile-adress-menu {
+    display: flex;
+    flex-direction: column;
+   
+    align-items: flex-start;
+    position: absolute;
+    width: 353px;
+    height: 104px;
+    left: 40px;
+    bottom: 128px;
+  }
+
+.mobile-menu-tel {
+    color: var(--btn-color-iris);
+    margin-bottom: 40px;
+}
+
+.mobile-mailto {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+}
+
+.social-link-mobile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 56px;
+
+    position: absolute;
+    width: 328px;
+    height: 40px;
+    left: 40px;
+    bottom: 40px;
+}
+
+
 .top-line {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    border-bottom: 1px solid #E7E9FC;
+    /*border-bottom: 1px solid #E7E9FC;*/
+  
 }
+
 @media only screen and (max-width: 768px) {
     .top-line {
       display: none;
     }
   }
-
+@media only screen and (min-width: 1158px) {
+  .top-line {
+    align-items: baseline;
+  }
+}
 .nav-list {
     display: flex;
     max-width: 564px;
-    padding-bottom: 24px;
-    gap: 40px;
+    height: 48px;
+ 
     align-items: center;
 }
 
@@ -363,6 +415,17 @@ section {
     text-transform: uppercase;
 }
 
+.link-list {
+    display: flex;
+    gap: 40px;
+    margin-right: auto;
+}
+
+.link-item {
+    color: var(--backgraund-dark);
+    text-decoration: none;  
+    gap: 40px;
+   }
 .header-nav-link {
     position: relative;
     color: var(--backgraund-dark);
@@ -381,13 +444,12 @@ section {
 
 
 .active::after {
-    color: var(--btn-color-okean);
     content: "";
     display: inline-block;
     position: absolute;
     bottom: -1px;
     left: 0px;
-  
+    color: var(--btn-color-okean);
     width: 100%;
     height: 4px;
     border-radius: 2px;
@@ -396,19 +458,8 @@ section {
 }
 
 
-.link-list {
-    display: flex;
-    gap: 40px;
-    margin-right: auto;
-}
 
-.link-item {
-    color: var(--backgraund-dark);
-    text-decoration: none;  
-    gap: 40px;
-   }
-
-   .adress-link {
+.adress-link {
     text-decoration: none;
     color: var(--text-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -416,23 +467,41 @@ section {
 
 .adress {
     display: block;
-    max-width: 347px;
+    /*max-width: 347px;*/
     margin: 0px;
     font-style: normal; 
-}  
+    padding: 0px;
+} 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 1158px) {
   .adress {
-    display: none;
+     display: inline;
   }
 }
+
 .adress-list {
     padding-top: 24px;
     padding-bottom: 24px; 
 }
 
+@media only screen and (min-width: 768px) {
+    .adress-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 0px;
+    }
+  }
+
+@media only screen and (min-width: 1158px) {
+  .adress-list {
+    flex-direction: row;
+    gap: 40px;
+    margin-left: 332px;
+  }
+}
 .mailto {
-    margin-right: 40px;
+   
 }
 
 .button {
@@ -1042,6 +1111,8 @@ section {
 .modal-close-icon {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
+
+
 .modal-close-icon:hover
 .modal-close-icon:focus {
    
