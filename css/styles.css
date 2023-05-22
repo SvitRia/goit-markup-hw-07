@@ -548,7 +548,6 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     }
 
 
-
 /*----index.html-----*/
 .hero {
     max-width: 1440px;
@@ -605,7 +604,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 @media only screen and (min-width: 1158px) {
   .hero {
-    max-width: 1440px;
+   
     height: 600px;
 
     padding: 188px 0px;
@@ -630,8 +629,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-
-     color: var(--white-color);  
+    color: var(--white-color);  
 }
 
 @media only screen and (min-width: 768px) {
@@ -717,6 +715,12 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     border-radius: 4px;
     margin-bottom: 8px;
 }
+@media only screen and (min-width: 1158px) {
+  .feature-box {
+    display: flex;
+  }
+}
+
 .feature-item {
     max-width: 396px;
 }
@@ -735,7 +739,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 /*---about---*/
 
 .about-section {
-
+padding: 0px;
 }
 .about-container {
    display: none;
