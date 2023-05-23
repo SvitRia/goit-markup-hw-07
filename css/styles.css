@@ -208,7 +208,7 @@ section {
 
 .header {
     position: fixed;
-    width: 100%;
+    width: 428%;
     height: 70px;
     padding: 0px;
     margin: 0 auto;
@@ -218,10 +218,18 @@ section {
 
 @media only screen and (min-width: 768px) {
   .header {
+    width: 768px;
     height: 72px;
     padding-top: 16px;
   }
 }
+
+@media only screen and (min-width: minwidthpx) {
+  .header {
+    width: 1440px;
+  }
+}
+
 /*border-bottom: 1px solid var(--leinercoolor);
 box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);*/
 
@@ -1421,7 +1429,3 @@ padding: 0px;
 .card-box-tittle {
     margin-bottom: 8px;
 }
-
-.adress-item {}
-
-
