@@ -208,8 +208,6 @@ section {
 
 .header {
    
-    /*position: fixed;
-    top: 0px;*/
     width: 428px;
     height: 70px;
     padding: 0px;
@@ -230,9 +228,10 @@ section {
   }
 }
 
-/*border-bottom: 1px solid var(--leinercoolor);
-box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);*/
-
+.header-portfolio {
+border-bottom: 1px solid var(--leinercoolor);
+box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
  .menu {
     display: flex;
     padding: 0;
@@ -1347,14 +1346,42 @@ padding: 0px;
 /*-----portfolio-----*/
 
 .portfolio-section {
-    padding: 96px 0px 120px;
+    padding: 48px 16px ;
+}
+
+@media only screen and (min-width: 768px) {
+  .portfolio-section {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .portfolio-section {
+    padding: 100px 15px 120px;
+  }
 }
 
 .btn-portfolio-list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 16px 24px;
+    margin-bottom: 48px;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn-portfolio-list {
+    flex-wrap: nowrap;
     justify-content: center;
     flex-basis: 586px;
-    gap: 24px;
+    margin-bottom: 64px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .btn-portfolio-list {
     margin-bottom: 72px;
+  }
 }
 
 .btn-portfolio {
@@ -1372,10 +1399,26 @@ padding: 0px;
 }
 
 .container-portfolio {
+    display: block;
+
+}
+.container-portfolio:not(:last-child) {
+    margin-bottom: 48px;
+}
+    
+@media only screen and (min-width: 768px) {
+  .container-portfolio {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 48px;
-    column-gap: 24px;
+    gap: 72px 24px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .portfolio-section {
+    gap: 48px 24px;
+    
+  }
 }
 
 .link-portfolio {
@@ -1385,9 +1428,25 @@ padding: 0px;
 }
 
 .card-box {
-    width: calc((100% - 48px)/3); 
+    width: 396px; 
+    height: 400px;
     border: 1px solid var(--leinercoolor);
 }
+ 
+@media only screen and (min-width: 768px) {
+  .card-box  {
+    width: 356px;
+    height: 420px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .card-box {
+    width: 360px;
+    
+  }
+}
+
 
 .link-portfolio:hover .overlay-text,
 .link-portfolio:focus .overlay-text
@@ -1401,12 +1460,23 @@ padding: 0px;
 .overlay {
     position: relative;
     overflow: hidden;
-    width: 360px;
+    width: 396px;
     
     top: 0px;
     left: 0px;
  }
-    
+   
+@media only screen and (min-width: 768px) {
+   .overlay {
+    width: 356px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .overlay {
+    width: 360px;
+  }
+}
 .overlay-text {
     position: absolute;
     top: 0px;
@@ -1429,10 +1499,21 @@ padding: 0px;
     border: 1px solid var(--leinercoolor);
     border-top: none;
     gap: 8px;
-    max-width: 360px;        
-    flex-basis: 360px;
+    width: 396px;        
 }
 
+@media only screen and (min-width: 768px) {
+  .card-text-box {
+    width: 356px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .card-text-box {
+    width: 360px;
+  }
+}
 .card-box-tittle {
-    margin-bottom: 8px;
+    
+   
 }
