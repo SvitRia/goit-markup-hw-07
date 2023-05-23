@@ -207,13 +207,13 @@ section {
 }
 
 .header {
-    position: fixed;
-    width: 428%;
+   
+    /*position: fixed;
+    top: 0px;*/
+    width: 428px;
     height: 70px;
     padding: 0px;
-    margin: 0 auto;
-    top: 0px;
-   
+    margin: 0px auto;   
  }
 
 @media only screen and (min-width: 768px) {
@@ -224,7 +224,7 @@ section {
   }
 }
 
-@media only screen and (min-width: minwidthpx) {
+@media only screen and (min-width: 1158px) {
   .header {
     width: 1440px;
   }
@@ -249,8 +249,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   /*--mobile-header-menu--*/
 
 .header-mobile {
-    display: flex;
-   position: relative;
+    position: relative;
   
  }
 
@@ -289,10 +288,11 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     position: absolute;
     top: 24px;
     right: 16px;
+
     height: 22px;
     width: 32px;
     display: flex;
-    margin: 0;
+    
     padding: 0;
     background-color: transparent;
     cursor: pointer;
@@ -561,7 +561,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     max-width: 1440px;
     height: 432px;
     padding: 112px 0px;
-    margin-top: 72px;
+   
     line-height: 1.07;
     align-items: center;
     background-repeat: no-repeat;
@@ -579,6 +579,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/bg-img428-@2x.jpg);
   }
+}
   @media only screen and (min-width: 429px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/bg-img768-@1x.jpg);
@@ -937,14 +938,20 @@ padding: 0px;
  /*--footer--*/
 
 .footer { 
-    width: 1440px;
+    width: 428px;
     margin: 0px auto;
     padding: 96px 0px;
     background: var(--backgraund-dark)
     }
+@media only screen and (min-width: 768px) {
+  .footer {
+    width: 768px;
+  }
+}
 
 @media only screen and (min-width: 1158px) {
       .footer {
+        width: 1440px;
         padding: 100px 108px;
     }
   }
