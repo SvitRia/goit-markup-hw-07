@@ -176,7 +176,7 @@ label {
     border: 5px solid var(--white-color);
 }
 section {
-    min-height: 320px;
+    min-width: 320px;
     max-width: 428px;
     margin: 0px auto;
     padding: 96px 0px;
@@ -227,7 +227,7 @@ section {
   .header {
     max-width: 768px;
     height: 72px;
-    padding-top: 16px;
+    
   }
 }
 
@@ -393,7 +393,6 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 .top-line {
     display: flex;
-    justify-content: center;
    
 }
 
@@ -405,13 +404,14 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 @media only screen and (min-width: 1158px) {
   .top-line {
     align-items: baseline;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 .nav-list {
     display: flex;
     max-width: 564px;
-    height: 48px;
- 
+   
     align-items: center;
 }
 
@@ -475,7 +475,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     content: "";
     display: inline-block;
     position: absolute;
-    bottom: 2px;
+    bottom: -1px;
     left: 0px;
     color: var(--btn-color-okean);
     width: 100%;
@@ -501,7 +501,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 .adress {
     display: block;
-    margin: 0px;
+    margin-left: auto;
     font-style: normal; 
     padding: 0px;
 } 
@@ -523,8 +523,8 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
       display: flex;
       flex-direction: column;
       gap: 12px;
-      padding: 0px;
-      margin-left: 120px;
+      padding: 16px 0px;
+      
     }
   }
 
@@ -532,6 +532,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   .adress-list {
     flex-direction: row;
     gap: 40px;
+    padding: 0px;
  
   }
 }
@@ -571,7 +572,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 /*----index.html-----*/
 .hero {
     max-width: 100%;
-    height: 432px;
+  
     padding: 112px 0px;
    
     line-height: 1.07;
@@ -618,7 +619,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 @media only screen and (min-width: 768px) {
   .hero {
    
-    height: 436px;
+   
     
   }
 }
@@ -626,7 +627,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 @media only screen and (min-width: 1158px) {
   .hero {
    
-    height: 600px;
+  
     padding: 188px 0px;
     line-height: 1.07;
   }
@@ -690,12 +691,12 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     letter-spacing: 0.02em;
     text-decoration: none;
     text-transform: capitalize;
-    text-align: center;
+    margin-bottom: 8px;
     color: var(--backgraund-dark);
     
    }
 @media only screen and (min-width: 1158px) {
-    .feature-tittl {
+    .feature-tittle {
             font-size: 20px;           
             font-weight: 500;          
             text-transform: none;
@@ -813,7 +814,7 @@ padding: 0px;
 
 .team-item {
     width: 264px; 
-    height: 428px;
+   
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--white-color);
@@ -911,12 +912,14 @@ padding: 0px;
 @media only screen and (min-width: 768px) {
   .customers-container {
     max-width: 768px;
+    padding: 0px 108px;
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .customers-container {
     max-width: 1158px;
+    padding: 0px 15px;
   }
 }
 
@@ -989,7 +992,7 @@ padding: 0px;
 @media only screen and (min-width: 1158px) {
       .footer {
         max-width: 1158px;
-        padding: 100px 108px;
+        padding: 100px 15px 108px;
     }
   }
 
@@ -1391,7 +1394,7 @@ padding: 0px;
 /*-----portfolio-----*/
 
 .portfolio-section {
-    padding: 48px 16px ;
+    padding: 48px 0px ;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1403,7 +1406,7 @@ padding: 0px;
 
 @media only screen and (min-width: 1158px) {
   .portfolio-section {
-    padding: 100px 15px 120px;
+    padding: 100px 0px 120px;
   }
 }
 
@@ -1445,7 +1448,7 @@ padding: 0px;
 
 .container-portfolio {
     display: block;
-
+   
 }
 
     
@@ -1458,9 +1461,9 @@ padding: 0px;
 }
 
 @media only screen and (min-width: 1158px) {
-  .portfolio-section {
+  .container-portfolio {
     gap: 48px 24px;
-    
+    padding: 0px;
   }
 }
 
